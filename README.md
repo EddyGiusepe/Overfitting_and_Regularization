@@ -21,7 +21,7 @@ Esta técnica consiste em um ajuste na `Função de Perda` (Loss Function) com o
 
 4.- Data Augmentation
 
-* `Reduzir o tamanho da nossa Rede Neural` 
+5.- `Reduzir o tamanho da nossa Rede Neural` 
 
 ![image](https://user-images.githubusercontent.com/69597971/183274556-35d12d0b-a7c1-4965-b8ed-6da659543d13.png)
 
