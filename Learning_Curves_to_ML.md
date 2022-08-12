@@ -109,25 +109,96 @@ Então, um gráfico de curvas de aprendizado mostra `underfitting` se:
 
 `Overfitting` refere-se a um modelo que aprendeu muito bem o conjunto de dados de treinamento, incluindo o ruído estatístico ou flutuações aleatórias no conjunto de dados de treinamento.
 
+Isso geralmente ocorre se o modelo tiver mais capacidade do que o necessário para o problema e, por sua vez, muita flexibilidade. Também pode ocorrer se o modelo for `treinado por muito tempo`.
+
+Um gráfico de curvas de aprendizado mostra `overfitting` se:
+
+* O gráfico de perda (Loss) de Treinamento continua a diminuir com a experiência.
+
+* O gráfico de perda (Loss) de validação diminui até um ponto e começa a aumentar novamente.
+
+
+O ponto de inflexão na `Loss de validação` pode ser o ponto em que o treinamento pode ser interrompido, pois a experiência após esse ponto mostra a dinâmica do `overfitting`.
+
+![](https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-An-Overfit-Model.png)
+
+
+
+# Curvas de Aprendizagem de Bom Ajuste
+
+Um bom ajuste é o objetivo do algoritmo de aprendizado e existe entre um modelo de `Overfitting` e `Underfitting`.
+
+Um bom ajuste é identificado por uma Loss de Treinamento e Validação que diminui até um ponto de estabilidade com um Gap mínimo entre os dois valores finais de perda.
+
+A Loss do modelo quase sempre será menor no conjunto de dados de Treinamento do que no conjunto de dados de Validação. Isso significa que devemos esperar algum gap entre as curvas de aprendizado da Loss de treinamento e validação. Esse Gap é chamada de <font color="yellow">“Gap de generalização”</font>.
+
+Um gráfico de curvas de aprendizado mostra um bom ajuste se:
+
+* <font color="yellow">O gráfico da Loss de treinamento diminui até um ponto de estabilidade.</font>
+
+* O gráfico de perda de validação diminui até um ponto de estabilidade e tem um pequeno Gap com a Loss de treinamento.
+
+
+<font color="orange">O treinamento contínuo de um bom ajuste provavelmente levará a um overfitting.</font>
+
+
+![](https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-A-Good-Fit.png)
+
+
+
+# Como diagnosticar conjuntos de Dados não representativos
+
+As curvas de aprendizado também podem ser usadas para diagnosticar propriedades de um conjunto de Dados e se ele é relativamente representativo.
+
+Um conjunto de Dados não representativo significa um conjunto de dados que pode não capturar as características estatísticas relativas a outro conjunto de dados extraído do mesmo domínio, como entre um conjunto de TREINAMENTO e um conjunto de dados de VALIDAÇÃO. Isso geralmente pode ocorrer se o número de amostras em um conjunto de dados for muito pequeno em relação a outro conjunto de dados.
+
+Existem dois casos comuns que podem ser observados; eles são:
+
+* O conjunto de dados de treinamento é relativamente pouco representativo.
+
+* O conjunto de dados de validação é relativamente pouco representativo.
+
+
+# Conjunto de dados de TREINAMENTO não representativo
+
+Um conjunto de dados de treinamento não representativo significa que o conjunto de dados de treinamento não fornece informações suficientes para aprender o problema, em relação ao conjunto de dados de validação usado para avaliá-lo.
+
+Isso pode ocorrer se o conjunto de dados de treinamento tiver poucos exemplos em comparação com o conjunto de dados de validação.
+
+<font color="orange">Essa situação pode ser identificada por uma curva de aprendizado para a Loss de treinamento que mostra melhora e similarmente uma curva de aprendizado para a Loss de validação que mostra melhora, mas permanece um grande Gpa entre as duas curvas.</font>
+
+
+![](https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-a-Training-Dataset-the-May-be-too-Small-Relative-to-the-Validation-Dataset.png)
+
+
+
+# Conjunto de dados de VALIDAÇÃO não representativo
+
+Um conjunto de dados de validação não representativo significa que o conjunto de dados de validação não fornece informações suficientes para avaliar a capacidade de generalização do modelo.
+
+Isso pode ocorrer se o conjunto de dados de validação tiver poucos exemplos em comparação com o conjunto de dados de treinamento.
+
+<font color="orange">Este caso pode ser identificado por uma curva de aprendizado para a Loss de treinamento que parece um bom ajuste (ou outros ajustes) e uma curva de aprendizado para a Loss de validação que mostra movimentos ruidosos em torno da Loss de treinamento.</font>
+
+![](https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-a-Validation-Dataset-the-May-be-too-Small-Relative-to-the-Training-Dataset.png)
+
+
+Também pode ser identificado por uma Loss de validação menor que a Loss de treinamento. Nesse caso, indica que o conjunto de dados de validação pode ser mais fácil para o modelo prever do que o conjunto de dados de treinamento.
+
+
+![](https://machinelearningmastery.com/wp-content/uploads/2018/12/Example-of-Train-and-Validation-Learning-Curves-Showing-a-Validation-Dataset-that-is-Easier-to-Predict-than-the-Training-Dataset.png)
+
+
+
+
+Links de estudo:
+
+* [Machine Learning Mastery: Jason Brownlee PhD](https://machinelearningmastery.com/learning-curves-for-diagnosing-machine-learning-model-performance/)
+
+* [Machine Learning Mastery: ROC-AUC e Precision-Recall](https://machinelearningmastery.com/roc-curves-and-precision-recall-curves-for-classification-in-python/)
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Thanks God!
