@@ -45,6 +45,5 @@ Links de estudo:
 * [Kaggle: 7 Simple Technique to Prevent Overfitting](https://www.kaggle.com/getting-started/157623)
 
 
+
 Thanks God!
-
-
